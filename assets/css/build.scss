@@ -1,0 +1,37 @@
+//MAP
+$mail-size: (
+    md: 1.5rem,
+    sm: 1rem
+);
+//MAP-GET
+#emails {
+    h4{
+        font-size: map-get($mail-size, md);
+    }
+    p{
+        font-size: map-get($mail-size, sm);
+    }
+}
+//EXTEND
+#emails{
+    border: solid 1px red;
+    background-color: black;
+    color: white;
+    h4{
+        @extend #emails;
+    }
+    p{
+        @extend #emails;
+        border-top: solid orange 10px;
+    }
+}
+//MIXIN
+@mixin nav_dec {
+    :first-child::before{
+        content: "♥";
+    }
+}
+
+main{
+    @include nav_dec;
+}

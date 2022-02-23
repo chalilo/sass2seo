@@ -1,0 +1,23 @@
+@charset "UTF-8";
+#emails h4 {
+  font-size: 1.5rem;
+}
+
+#emails p {
+  font-size: 1rem;
+}
+
+#emails, #emails h4, #emails p {
+  border: solid 1px red;
+  background-color: black;
+  color: white;
+}
+
+#emails p {
+  border-top: solid orange 10px;
+}
+
+main :first-child::before {
+  content: "♥";
+}
+/*# sourceMappingURL=build.css.map */
